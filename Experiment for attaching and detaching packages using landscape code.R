@@ -5,7 +5,11 @@ packagedelivery<-function(fry,leela){
     
     require(leela,character.only = TRUE)
 } else{
-  unloadNamespace(grep(leela))
+  for(i in search()){
+    if(i==grep(leela)){
+  unloadNamespace(i)
+  }
+}
 }
 }
 
