@@ -3,9 +3,9 @@ packagedelivery<-function(fry,leela){
   if(fry == TRUE){
     
     
-    require(leela,character.only = TRUE)
+    library(leela,character.only = TRUE)
 } else{
-  detach(leela,unload=TRUE, character.only=TRUE)
+  detach(sprintf("package:%s",leela), unload=TRUE, character.only=TRUE)
 }
 }
 
