@@ -20,9 +20,9 @@ packagedelivery(FALSE,"spatstat")
 
 x<-grepl("spatstat",search())
 for (j in x){
-for (i in search()){
+for (i in 1:length(search())){
   if (j == TRUE){
-    detach(i, unload=TRUE, character.only = TRUE)
+    detach(pos=i, unload=TRUE, character.only = TRUE)
   }
 }
 }
