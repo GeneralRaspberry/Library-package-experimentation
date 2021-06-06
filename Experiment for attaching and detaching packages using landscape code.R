@@ -5,7 +5,7 @@ packagedelivery<-function(fry,leela){
     
     library(leela,character.only = TRUE)
 } else{
-  detach(sprintf("package:%s",leela), unload=TRUE, character.only=TRUE)
+  unloadNamespace(leela)
 }
 }
 
