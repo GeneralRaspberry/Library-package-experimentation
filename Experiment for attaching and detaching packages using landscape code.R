@@ -3,9 +3,9 @@ packagedelivery<-function(fry,leela){
   if(fry == TRUE){
     
     
-    library(leela,character.only = TRUE)
+    require(leela,character.only = TRUE)
 } else{
-  unloadNamespace(leela)
+  unloadNamespace(grep(leela))
 }
 }
 
