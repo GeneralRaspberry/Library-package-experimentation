@@ -6,7 +6,7 @@ packagedelivery<-function(fry,leela){
     require(leela,character.only = TRUE)
 } else{
   for(i in search()){
-    if(i==grep(leela)){
+    if(i==grep(leela,search())){
   unloadNamespace(i)
   }
 }
