@@ -5,13 +5,27 @@ packagedelivery<-function(fry,leela){
     
     require(leela,character.only = TRUE)
 } else{
-  detach(grep(sprintf("package:%s",leela),search()), unload=TRUE, character.only=TRUE)
+  for(i in search()){
+    if(grepl(sprintf("%s",leela),search())==TRUE){
+  unloadNamespace(i)
+  }
+}
 }
 }
 
 packagedelivery(FALSE,"spatstat")
 
 
+#########################Experimenting with grepl#####################################################
+
+x<-grepl("spatstat",search())
+for (j in x){
+for (i in search()){
+  if (j == TRUE){
+    detach(i, unload=TRUE, character.only = TRUE)
+  }
+}
+}
 #generate a marks object
 
 radiusCluster<-100
