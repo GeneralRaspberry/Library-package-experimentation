@@ -5,7 +5,7 @@ packagedelivery<-function(fry,leela){
     
     require(leela,character.only = TRUE)
 } else{
-  detach(grep(sprintf("package:%s",leela)), unload=TRUE, character.only=TRUE)
+  detach(grep(sprintf("package:%s",leela),search()), unload=TRUE, character.only=TRUE)
 }
 }
 
